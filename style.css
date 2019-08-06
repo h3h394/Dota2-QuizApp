@@ -1,0 +1,257 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Courgette", cursive;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  background: #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.topContainer {
+  width: 900px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.topContainer .quizTitle {
+  margin: 0;
+  line-height: 1;
+  color: #fff;
+  font-size: 40px;
+}
+
+.topContainer .quizResults p {
+  color: #fff;
+  margin: 0;
+  font-size: 25px;
+  text-align: right;
+}
+
+.topContainer .quizResults p .correctQuizAnswers,
+.topContainer .quizResults p .totalQuizPoints {
+  color: red;
+}
+
+.quizContainer {
+  width: 900px;
+  height: 820px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fff), color-stop(50%, #5c9ff7));
+  background: linear-gradient(#fff 50%, #5c9ff7 50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 1px 40px 0px #5c9ff7;
+          box-shadow: 1px 1px 40px 0px #5c9ff7;
+  position: relative;
+}
+
+.quizContainer .quizHeading {
+  width: 100%;
+  padding: 40px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.quizContainer .quizHeading .quizImage img {
+  height: 280px;
+  -webkit-transition: -webkit-transform 900ms;
+  transition: -webkit-transform 900ms;
+  transition: transform 900ms;
+  transition: transform 900ms, -webkit-transform 900ms;
+}
+
+.quizContainer .quizHeading .quizImage img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.quizContainer .quizAnswersContainer {
+  width: 790px;
+  height: 300px;
+  margin: 0 auto 6px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+.quizContainer .quizAnswersContainer .quizAnswer {
+  width: 374px;
+  height: 140px;
+  background: #fff;
+  color: #2d2483;
+  text-shadow: 1px 1px #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  font-size: 44px;
+  font-weight: 500;
+  border-radius: 4px;
+  border: 10px inset #0952b1;
+}
+
+.quizContainer .resultsPage {
+  position: absolute;
+  top: 14%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  max-width: 400px;
+}
+
+.quizContainer .resultsPage h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 1.2;
+}
+
+.quizContainer .resultsPage .allCorrectAnswers,
+.quizContainer .resultsPage .allPoints {
+  margin: 14px 0;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.quizContainer .resultsPage .newGame {
+  background: #5c9ff7;
+  border: none;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 1px 5px 0px #000;
+          box-shadow: 1px 1px 5px 0px #000;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  -webkit-transition: background 600ms;
+  transition: background 600ms;
+}
+
+.quizContainer .resultsPage .newGame:hover {
+  background: #0b68e2;
+}
+
+@media (max-width: 700px) {
+  .topContainer .quizTitle {
+    font-size: 28px;
+  }
+  .topContainer .quizResults p {
+    font-size: 22px;
+  }
+  .quizContainer {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .quizContainer .quizAnswersContainer {
+    width: 430px;
+    max-width: 90%;
+    height: 390px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .quizContainer .quizAnswersContainer .quizAnswer {
+    width: 100%;
+    height: 80px;
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  .quizContainer .resultsPage {
+    max-width: 86%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 980px) {
+  .quizContainer .quizAnswersContainer {
+    width: 615px;
+    height: 320px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .quizContainer .quizAnswersContainer .quizAnswer {
+    width: 45%;
+    height: 140px;
+    margin-bottom: 16px;
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 980px) {
+  .topContainer {
+    width: 90%;
+    margin: 10px 0;
+  }
+  .quizContainer {
+    width: 90%;
+  }
+  .quizContainer .resultsPage {
+    top: 10%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
